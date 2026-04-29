@@ -149,10 +149,10 @@ st.markdown("""
     /* ── Baseline reference card ── */
     .section-label {
         font-family: 'Space Mono', monospace;
-        font-size: 0.68rem;
-        letter-spacing: 0.14em;
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: var(--text-muted);
+        color: var(--text-secondary);
         margin-bottom: 0.7rem;
         display: flex;
         align-items: center;
@@ -174,7 +174,7 @@ st.markdown("""
     }
     .sample-index {
         font-family: 'Space Mono', monospace;
-        font-size: 0.65rem;
+        font-size: 0.75rem;
         color: var(--accent);
         border: 1px solid var(--accent);
         border-radius: 4px;
@@ -190,17 +190,17 @@ st.markdown("""
     .sample-id {
         margin-left: auto;
         font-family: 'Space Mono', monospace;
-        font-size: 0.65rem;
-        color: var(--text-muted);
+        font-size: 0.75rem;
+        color: var(--text-secondary);
     }
 
     /* ── Column headers ── */
     .col-header {
         font-family: 'Space Mono', monospace;
-        font-size: 0.65rem;
-        letter-spacing: 0.1em;
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
-        color: var(--text-muted);
+        color: var(--text-secondary);
         margin-bottom: 0.5rem;
         padding-bottom: 0.3rem;
         border-bottom: 1px solid var(--border);
@@ -314,7 +314,7 @@ translations = {
 
 # Sidebar logo placeholder
 with st.sidebar:
-    st.image("logo.png", use_container_width=True)
+    st.image("logo.png", width=160)
 
 selected_lang = st.sidebar.radio("Language / 言語", ["English", "日本語"], label_visibility="collapsed")
 t = translations[selected_lang]
@@ -356,7 +356,6 @@ def img_to_base64(path):
 
 logo_b64 = img_to_base64("logo.png")
 
-# Then in the header HTML string:
 st.markdown(f"""
 <div class="app-header">
     <span class="title">{t['title']}</span>
